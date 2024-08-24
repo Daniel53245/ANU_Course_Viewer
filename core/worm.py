@@ -64,8 +64,9 @@ class BasicCrawler:
 
     def _process_page(self, soup):
         title = soup.find("title").get_text() if soup.find("title") else "No Title"
-        # if there is no elem in list with this url
+        # if there is no elem in list with this ur
         this_course = course.Course(title)
+        this_course.course_url = self.current_url
         this_course.course_code = extract_course_code(self.current_url)
         # find inhereietn requiremnts
         inherent_requirements = self._get_inherent_reqirement(soup)
