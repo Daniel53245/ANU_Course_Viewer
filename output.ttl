@@ -1,72 +1,53 @@
 @prefix ns1: <http://caligula.today/onto#> .
 
-<http://caligula.today/data/COMP4820> a ns1:Course ;
-    ns1:prequisite_from <http://caligula.today/data/COMP2100>,
-        <http://caligula.today/data/COMP2120>,
-        <http://caligula.today/data/COMP4500>,
-        <http://caligula.today/data/COMP4550>,
-        <http://caligula.today/data/COMP4560>,
-        <http://caligula.today/data/COMP4810> .
+<http://caligula.today/data/COMP4691> a ns1:Course ;
+    ns1:CourseURL "https://programsandcourses.anu.edu.au/2025/course/COMP4691" ;
+    ns1:prequisite_from <http://caligula.today/data/COMP3620>,
+        <http://caligula.today/data/COMP8691>,
+        <http://caligula.today/data/MATH1013>,
+        <http://caligula.today/data/MATH1115> .
 
-<http://caligula.today/data/COMP3500> a ns1:Course ;
-    ns1:prequisite_from <http://caligula.today/data/COMP2100>,
-        <http://caligula.today/data/COMP2120> .
-
-<http://caligula.today/data/COMP4540> a ns1:Course .
-
-<http://caligula.today/data/COMP6120> a ns1:Course ;
-    ns1:prequisite_from <http://caligula.today/data/COMP2100>,
-        <http://caligula.today/data/COMP2120>,
-        <http://caligula.today/data/COMP6442> .
-
-<http://caligula.today/data/COMP2130> a ns1:Course ;
-    ns1:prequisite_from <http://caligula.today/data/COMP2100>,
-        <http://caligula.today/data/COMP6311> .
-
-<http://caligula.today/data/COMP4560> a ns1:Course ;
-    ns1:prequisite_from <http://caligula.today/data/COMP4500>,
-        <http://caligula.today/data/COMP4550>,
-        <http://caligula.today/data/COMP4810> .
-
-<http://caligula.today/data/COMP6311> a ns1:Course ;
-    ns1:prequisite_from <http://caligula.today/data/COMP2130>,
-        <http://caligula.today/data/COMP6442> .
-
-<http://caligula.today/data/COMP1110> a ns1:Course ;
-    ns1:prequisite_from <http://caligula.today/data/COMP1140> .
+<http://caligula.today/data/COMP8691> a ns1:Course ;
+    ns1:CourseURL "https://programsandcourses.anu.edu.au/2025/course/COMP8691" ;
+    ns1:prequisite_from <http://caligula.today/data/COMP3620>,
+        <http://caligula.today/data/COMP6320> .
 
 <http://caligula.today/data/COMP1140> a ns1:Course ;
+    ns1:CourseURL "https://programsandcourses.anu.edu.au/2025/course/COMP1140" ;
     ns1:prequisite_from <http://caligula.today/data/COMP1110> .
 
-<http://caligula.today/data/COMP4500> a ns1:Course ;
-    ns1:prequisite_from <http://caligula.today/data/COMP2120>,
-        <http://caligula.today/data/COMP3500>,
-        <http://caligula.today/data/COMP4540>,
-        <http://caligula.today/data/COMP4550>,
-        <http://caligula.today/data/COMP4810> .
+<http://caligula.today/data/COMP2620> a ns1:Course .
 
-<http://caligula.today/data/COMP4810> a ns1:Course ;
-    ns1:prequisite_from <http://caligula.today/data/COMP2100>,
-        <http://caligula.today/data/COMP2120>,
-        <http://caligula.today/data/COMP4500>,
-        <http://caligula.today/data/COMP4550>,
-        <http://caligula.today/data/COMP4560> .
+<http://caligula.today/data/COMP6320> a ns1:Course ;
+    ns1:CourseURL "https://programsandcourses.anu.edu.au/2025/course/COMP6320" ;
+    ns1:prequisite_from <http://caligula.today/data/COMP1110>,
+        <http://caligula.today/data/COMP2620>,
+        <http://caligula.today/data/COMP3620> .
 
-<http://caligula.today/data/COMP6442> a ns1:Course ;
+<http://caligula.today/data/MATH1113> a ns1:Course ;
+    ns1:CourseURL "https://programsandcourses.anu.edu.au/2025/course/MATH1113" ;
+    ns1:prequisite_from <http://caligula.today/data/MATH1013>,
+        <http://caligula.today/data/MATH1115> .
+
+<http://caligula.today/data/COMP1110> a ns1:Course ;
+    ns1:CourseURL "https://programsandcourses.anu.edu.au/2025/course/COMP1110" ;
+    ns1:prequisite_from <http://caligula.today/data/COMP1140> .
+
+<http://caligula.today/data/COMP3620> a ns1:Course ;
+    ns1:CourseURL "https://programsandcourses.anu.edu.au/2025/course/COMP3620" ;
     ns1:prequisite_from <http://caligula.today/data/COMP1110>,
         <http://caligula.today/data/COMP1140>,
-        <http://caligula.today/data/COMP2100> .
+        <http://caligula.today/data/COMP2620>,
+        <http://caligula.today/data/COMP6320> .
 
-<http://caligula.today/data/COMP4550> a ns1:Course .
+<http://caligula.today/data/MATH1013> a ns1:Course ;
+    ns1:CourseURL "https://programsandcourses.anu.edu.au/2025/course/MATH1013" ;
+    ns1:prequisite_from <http://caligula.today/data/MATH1113>,
+        <http://caligula.today/data/MATH1115> .
 
-<http://caligula.today/data/COMP2120> a ns1:Course ;
-    ns1:prequisite_from <http://caligula.today/data/COMP2100>,
-        <http://caligula.today/data/COMP2130>,
-        <http://caligula.today/data/COMP6120>,
-        <http://caligula.today/data/COMP6311> .
-
-<http://caligula.today/data/COMP2100> a ns1:Course ;
-    ns1:prequisite_from <http://caligula.today/data/COMP1110>,
-        <http://caligula.today/data/COMP1140>,
-        <http://caligula.today/data/COMP6442> .
+<http://caligula.today/data/MATH1115> a ns1:Course ;
+    ns1:CourseURL "https://programsandcourses.anu.edu.au/2025/course/MATH1115" ;
+    ns1:prequisite_from <http://caligula.today/data/MATH1013>,
+        <http://caligula.today/data/MATH1113>,
+        <http://caligula.today/data/MATH1115> .
 

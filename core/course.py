@@ -49,7 +49,7 @@ class Course:
         ) in self.prequiste_course.items():
             related_course_uri = data[related_course_instance.generate_uid()]
             triples.append((course_uri, ex.prequisite_from, related_course_uri))
-            triples.append((course_uri, ex["CourseURL"]), self.course_url)
+            triples.append((course_uri, ex["CourseURL"], Literal(self.course_url)))
             triples.append((related_course_uri, RDF.type, ex.Course))
             # triples.append(
             #     (

@@ -24,14 +24,14 @@ class BasicCrawler:
     def _crawl_page(self, url, depth):
         if depth > self.max_depth or url in self.visited:
             return 0
-
+        head = {"User-Agent": "Mozilla/5.0"}
         print(f"Crawling: {url} (Depth: {depth})")
         self.visited.add(url)
         self.current_url = url
         try:
-            response = requests.get(url)
+            response = requests.get(url, headers=head)
             if response.status_code != 200:
-                print(f"Failed to retrieve {url}")
+                print(f"Failed to retrieve {url} status: {response.status_code}")
                 return
         except requests.RequestException as e:
             print(f"Request failed: {e}")
