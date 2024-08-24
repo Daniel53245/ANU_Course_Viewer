@@ -38,22 +38,22 @@ class Course:
         # Process each course in the list
         course_uri = data[self.generate_uid()]
         triples.append((course_uri, RDF.type, ex.Course))
-        triples.append(
-            (course_uri, ex.courseString, Literal(self.name, datatype=XSD.string))
-        )
+        # triples.append(
+        #     (course_uri, ex.courseString, Literal(self.name, datatype=XSD.string))
+        # )
         for (
             related_course_string,
             related_course_instance,
         ) in self.prequiste_course.items():
             related_course_uri = data[related_course_instance.generate_uid()]
-            triples.append((course_uri, ex.prequusite_from, related_course_uri))
+            triples.append((course_uri, ex.prequisite_from, related_course_uri))
             triples.append((related_course_uri, RDF.type, ex.Course))
-            triples.append(
-                (
-                    related_course_uri,
-                    ex.courseString,
-                    Literal(related_course_instance.course_code, datatype=XSD.string),
-                )
-            )
+            # triples.append(
+            #     (
+            #         related_course_uri,
+            #         ex.courseString,
+            #         Literal(related_course_instance.course_code, datatype=XSD.string),
+            #     )
+            # )
 
         return triples
